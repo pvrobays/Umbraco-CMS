@@ -228,7 +228,6 @@ public static partial class UmbracoBuilderExtensions
         builder.Services.AddSingleton(RecurringBackgroundJobHostedService.CreateHostedServiceFactory);
         builder.Services.AddHostedService<RecurringBackgroundJobHostedServiceRunner>();
 
-
         return builder;
     }
 
