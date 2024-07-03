@@ -33,7 +33,9 @@
     <PackageVersion Include="Microsoft.Extensions.Options" Version="8.0.1" />
     <PackageVersion Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
     <PackageVersion Include="Microsoft.Extensions.Options.DataAnnotations" Version="8.0.0" />
+    <PackageVersion Include="Our.Umbraco.GMaps" Version="3.0.2" />
     <PackageVersion Include="System.Runtime.Caching" Version="8.0.0" />
+    <PackageVersion Include="Umbraco.Forms" Version="13.0.2" />
   </ItemGroup>
   <!-- Umbraco packages -->
   <ItemGroup>

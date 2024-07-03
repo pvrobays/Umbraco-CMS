@@ -14,6 +14,8 @@
   <ItemGroup>
     <!-- Add design/build time support for EF Core migrations -->
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" PrivateAssets="all" />
+    <PackageReference Include="Our.Umbraco.GMaps" />
+    <PackageReference Include="Umbraco.Forms" />
   </ItemGroup>
 
   <ItemGroup>
