@@ -45,6 +45,7 @@ using Umbraco.Cms.Infrastructure.BackgroundJobs.Jobs;
 using Umbraco.Cms.Infrastructure.BackgroundJobs.Jobs.ServerRegistration;
 using Umbraco.Cms.Infrastructure.DependencyInjection;
 using Umbraco.Cms.Infrastructure.HostedServices;
+using Umbraco.Cms.Infrastructure.HostedServices.Analytics;
 using Umbraco.Cms.Infrastructure.HostedServices.ServerRegistration;
 using Umbraco.Cms.Infrastructure.Migrations.Install;
 using Umbraco.Cms.Infrastructure.Persistence;
@@ -198,6 +199,20 @@ public static partial class UmbracoBuilderExtensions
                 provider.GetRequiredService<ILogger<ReportSiteTask>>(),
                 provider.GetRequiredService<ITelemetryService>()));
 
+
+        return builder;
+    }
+
+    /// <summary>
+    /// Add Umbraco analytics
+    /// </summary>
+    /// <param name="builder"></param>
+    /// <returns></returns>
+    public static IUmbracoBuilder AddAnalytics(this IUmbracoBuilder builder)
+    {
+        builder.Services
+            .Configure<AnalyticsConfig>(builder.Config.GetSection(nameof(AnalyticsConfig)))
+            .AddHostedService<AnalyticsHostedService>();
 
         return builder;
     }
